@@ -1,0 +1,73 @@
+//ejercicio 1
+//Declaramos el método donde indicamos que si la división entre
+//dos del mismo número es cero el resultado será verdadero de lo
+//contrario sera falso
+def par(num:Int): Boolean = {
+        if(num%2 == 0){
+            return true
+        }
+    return false
+}
+println(par(9))
+
+
+//ejercicio 2
+//Declaramos una lista y mediante un for la recorremos mas un if
+//para saber si los numeros son pares o inpares al final solo los imprimimos
+
+def parlist (num: Int): Boolean={
+    if (num % 2 == 0) {
+      return true
+    }
+  return false
+}
+val listas = List(4,8,5,6,3)
+var a = 0
+for(a <- listas){
+  if (a <= a) {
+    println("el numero "+" "+a+" "+"es:")
+    println(parlist(a))
+  }
+}
+
+//ejercicio 3
+//se crea un método donde se recorre la lista y se busca los
+//siete y se declaran multiplicados por dos para a la hora de
+//sumar se sume como un 14
+val lista = List(7,7,5,6,7)
+def suma (siete: List[Int]): Int={
+  var sum = 0
+  for (j <- lista){
+    if(j == 7){
+      sum += j*2
+    }else {
+      sum += j
+    }
+  }
+  return sum
+  }
+println(suma(lista))
+
+//ejercicio 4
+val lista = List(8,5,6,2,4)
+def equilibrar (equilibrar: List[Int]): Boolean={
+  val (j,u) = equilibrar.splitAt(equilibrar.length/2)
+  if (j.sum == u.sum){ return true }
+  else return false
+}
+println(equilibrar(lista))
+
+//ejercicio 5
+//Se declara la variable para poder identificar si es un palíndromo
+//Se declara un método con una condición que evalúa la palabra
+//con la misma comenzando del final al inicio y si esta coincide
+ //se imprime un true de lo contrario se despliega un false
+
+val palabra="juan"
+def polin (palabra:String):Boolean = {
+if(palabra==palabra.reverse){
+return true
+}
+return false
+}
+println(polin(palabra))
